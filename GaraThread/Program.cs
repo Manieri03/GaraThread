@@ -19,7 +19,7 @@ namespace GaraThread
             }
             for(int c = 1; c <= n; c++)
             {
-                Thread IniziaCorsa = new Thread(() => Corsa(nomi[c]));
+                Thread IniziaCorsa = new Thread(() => Corsa(nomi[c])); 
                 IniziaCorsa.Start();
             }
             Console.ReadLine();
