@@ -32,7 +32,7 @@ namespace GaraThread
             {
                 Console.WriteLine($"{nome} è al km {c}.");
             }
-            Console.WriteLine($"{nome} è al km 100, è il vincitore!");
+            Console.WriteLine($"{nome} è al km 100, è arrivato");
         }
     }
 }
