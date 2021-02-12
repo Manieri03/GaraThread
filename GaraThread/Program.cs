@@ -17,9 +17,10 @@ namespace GaraThread
                 string nome = Console.ReadLine();
                 nomi.Add(nome);               
             }
-            for(int c = 1; c <= n; c++)
+            for(int c = 0; c < n; c++)
             {
-                Thread IniziaCorsa = new Thread(() => Corsa(nomi[c])); 
+                int toPass = c;
+                Thread IniziaCorsa = new Thread(() => Corsa(nomi[toPass])); 
                 IniziaCorsa.Start();
             }
             Console.ReadLine();
