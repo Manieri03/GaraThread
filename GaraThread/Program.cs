@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace GaraThread
 {
@@ -26,13 +27,17 @@ namespace GaraThread
             Console.ReadLine();
         }
 
-        private static void Corsa(string nome)
+        private static async Task Corsa(string nome)
         {
-            for (int c = 1; c < 100; c++)
+            await Task.Run(() =>
             {
-                Console.WriteLine($"{nome} è al km {c}.");
-            }
-            Console.WriteLine($"{nome} è al km 100, è arrivato");
+                for (int c = 1; c < 100; c++)
+                {
+                    Console.WriteLine($"{nome} è al km {c}.");
+                }
+                Console.WriteLine($"{nome} è al km 100, è arrivato");
+            });
+            
         }
     }
 }
